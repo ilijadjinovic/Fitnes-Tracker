@@ -118,7 +118,8 @@ window.fbLogout=async function(){
 window.fbSave=async function(){
   if(!window.fbUser){alert('Nisi prijavljen!');return;}
   try{
-    await setDoc(doc(db,'users',window.fbUser.uid),{data:JSON.stringify(window.S),updatedAt:new Date().toISOString()});
+    var clean=JSON.parse(JSON.stringify(window.S));
+    await setDoc(doc(db,'users',window.fbUser.uid),{data:JSON.stringify(clean),updatedAt:new Date().toISOString()});
     window.toast('✓ Snimljeno u cloud!');
   }catch(e){alert('Greška pri snimanju: '+e.message);}
 };
