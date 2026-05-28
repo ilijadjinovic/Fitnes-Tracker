@@ -1,7 +1,7 @@
 {"name":"Fitnes Tracker",
 "short_name":"Fitnes app",
 "start_url":"./index.html",
-"scope": "./TreningTracker/",
+"scope": "./Fitnes-Tracker/",
 "display":"standalone",
 "orientation":"portrait",
 "background_color":"#0f172a",
